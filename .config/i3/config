@@ -12,16 +12,16 @@
 
 ## Set Screens
 include $HOME/.config/i3/workspaces.conf
-set $fm DP-4
+set $fm DP-0
 set $sm HDMI-1
-set $tm DP-1
+set $tm DP-2
 
 ## Screen positions 
-exec xrandr --output DP-2 --auto --right-of DP-0
-exec xrandr --output HDMI-0 --auto --left-of DP-0
+exec xrandr --output $tm --auto --right-of $fm
+exec xrandr --output $sm --auto --left-of $fm
 
 ## Set primary screen
-exec xrandr --output DP-0 --primary
+exec xrandr --output $fm --primary
 
 # Not sure what this is lmao
 set $mod Mod4
